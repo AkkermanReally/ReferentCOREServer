@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  # Сервис №1: Наше приложение RefferentCOREServer
+  rcs:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      # Передаем в приложение адрес его приватной базы Redis
+      - REDIS_HOST=rcs-redis
+    depends_on:
+      - rcs-redis
+    volumes:
+      # Для удобства разработки: изменения в коде сразу видны в контейнере
+      - ./core:/app/core
+      - ./remote_components.json:/app/remote_components.json
+
+  # Сервис №2: Приватная база данных Redis для RCs
+  rcs-redis:
+    image: redis:7-alpine
+    # ВАЖНО: секции 'ports' нет. Redis недоступен извне, только для 'rcs'.

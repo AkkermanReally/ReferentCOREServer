@@ -1,0 +1,37 @@
+ {
+  "GeminiConnection": {
+    "uri": "ws://192.168.100.7:8000",
+    "auth_token": "GEMINICONNECTION_SECRET_TOKEN",
+    "disabled": false
+  },
+  "DocumentConnection": {
+    "uri": "ws://127.0.0.1:8800",
+    "auth_token": "SECRET_TOKEN_FOR_DOCUMENT_CONNECTOR",
+    "disabled": true
+  },
+  "Neo4jConnector": {
+    "uri": "ws://127.0.0.1:8801",
+    "auth_token": "SECRET_TOKEN_FOR_GRAPH_CONNECTOR",
+    "disabled": true
+  },
+  "TrinityExtractor": {
+    "uri": "ws://127.0.0.1:8827",
+    "auth_token": "TRINITY_EXTRACTOR_SECRET_TOKEN",
+    "disabled": false
+  },
+  "SemanticSplitter": {
+    "uri": "ws://127.0.0.1:8821",
+    "auth_token": "SEMANTICSPLITTER_SECRET_TOKEN",
+    "disabled": true
+  },
+  "SemanticSegmenter": {
+    "uri": "ws://127.0.0.1:8822",
+    "auth_token": "SECRET_TOKEN_FOR_SEMANTIC_SEGMENTER",
+    "disabled": true
+  },
+  "TestOrchestrator": {
+    "uri": "ws://127.0.0.1:8890",
+    "auth_token": "TOKEN_FOR_TESTOCR",
+    "disabled": true
+  }
+}
